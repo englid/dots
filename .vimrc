@@ -179,6 +179,7 @@ Plug 'git@github.com:junegunn/fzf.git'
 map <C-p> :FZF<cr>
 
 Plug 'git@github.com:w0rp/ale.git'
+let g:ale_set_highlights = 0
 
 Plug 'git@github.com:scrooloose/nerdtree.git'
 map <silent> <C-n> :NERDTreeToggle<CR>
