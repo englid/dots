@@ -1,0 +1,24 @@
+[user]
+    name = David English
+    email = bavib26@gmail.com
+[color]
+    ui = auto
+[alias]
+    br = branch
+    ci = commit
+    co = checkout
+    d = diff
+    find = "!git ls-files | grep -i"
+    g = grep -P
+    pr = "!hub pull-request"
+    purr = pull --rebase
+    st = status -sb
+    up = "!git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)"
+    lg = "!git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
+[log]
+    abbrevCommit = true
+[merge]
+    conflictstyle = diff3
+[push]
+    default = simple
