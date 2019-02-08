@@ -31,3 +31,5 @@ setopt NO_NOMATCH
 # Safe copy and move
 alias cp="cp -i"
 alias mv="mv -i"
+
+alias navi="cd ~/code/navi_automation_api"

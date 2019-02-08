@@ -22,7 +22,7 @@ set ffs=unix,dos,mac " default file types
 set so=2 " always keep at least 2 lines of context when scrolling
 set wildmenu " turn on WiLd menu
 set ruler " always show current position
-set cmdheight=2 " the commandbar height
+set cmdheight=1 " the commandbar height
 set hid " hide abandon buffers in order to not lose undo history.
 set backspace=eol,start,indent " set backspace config
 set whichwrap+=<,>,h,l
@@ -91,6 +91,8 @@ set expandtab
 set shiftwidth=4
 set tabstop=4
 set smarttab
+set smartindent
+autocmd FileType html,xhtml,xml,css,ts,js setlocal shiftwidth=2 tabstop=2
 
 set lbr
 set tw=500 " text width
@@ -180,12 +182,15 @@ map <C-p> :FZF<cr>
 
 Plug 'git@github.com:w0rp/ale.git'
 let g:ale_set_highlights = 0
+let g:ale_sign_error ='>'
+let g:ale_sign_warning ='~'
 
 Plug 'git@github.com:scrooloose/nerdtree.git'
 map <silent> <C-n> :NERDTreeToggle<CR>
 
 Plug 'git@github.com:Valloric/YouCompleteMe.git'
 
-call plug#end()
+Plug 'git@github.com:leafgarland/typescript-vim.git'
 
+call plug#end()
 
