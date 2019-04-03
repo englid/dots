@@ -130,8 +130,8 @@ map <leader>bd :Bclose<cr>
 map <leader>ba :1,300 bd!<cr>
 
 " Moving through buffers
-map <C-j> :bn<cr>
-map <C-k> :bp<cr>
+map <C-j> :bp<cr>
+map <C-k> :bn<cr>
 
 " When pressing <leader>cd switch to the directory of the open buffer
 map <leader>cd :cd %:p:h<cr>
@@ -191,6 +191,8 @@ map <silent> <C-n> :NERDTreeToggle<CR>
 Plug 'git@github.com:Valloric/YouCompleteMe.git'
 
 Plug 'git@github.com:leafgarland/typescript-vim.git'
+
+Plug 'ap/vim-buftabline'
 
 call plug#end()
 
