@@ -24,12 +24,9 @@ host=$'%{\e[1;34m%}%m%{\e[0m%}'
 dir=$'%{\e[0;31m%}%c/%{\e[0m%}'
 branch=$'%{\e[1;32m%}''$(git_branch)'$'%{\e[0m%}'
 export PROMPT=$name$at$host$' '$branch$dir$': '
-alias bpi="cat requirements.txt | sed 's/-e.*\(Antagone\|kansas\|Taggart\|Spiner\).*/-e \/Users\/deenglis\/\1/' | sed 's/^--allow/#--allow/g' > requirements.local.txt; pip install -r requirements.local.txt; rm requirements.local.txt"
 
 setopt NO_NOMATCH
 
 # Safe copy and move
 alias cp="cp -i"
 alias mv="mv -i"
-
-alias navi="cd ~/code/navi_automation_api"
