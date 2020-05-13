@@ -30,3 +30,15 @@ setopt NO_NOMATCH
 # Safe copy and move
 alias cp="cp -i"
 alias mv="mv -i"
+
+export LD_LIBRARY_PATH=/usr/local/lib
+
+#Virtualenvwrapper settings:
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_VIRTUALENV=/home/$USER/.local/bin/virtualenv
+source ~/.local/bin/virtualenvwrapper.sh
+
+# Starfish client completion
+eval "$(register-python-argcomplete client)"
+eval "$(register-python-argcomplete sf)"
