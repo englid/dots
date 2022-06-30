@@ -6,7 +6,7 @@ filetype plugin indent on     " required!
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax enable " syntax highlighting
-colorscheme Nglish
+colorscheme codedark
 
 set encoding=utf8
 try
