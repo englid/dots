@@ -175,24 +175,24 @@ function! HasPaste()
 endfunction
 
 " Plugins
-call plug#begin('~/.vim/plugged')
+if !exists('$GIT_EXEC_PATH')
+    call plug#begin('~/.vim/plugged')
 
-Plug 'git@github.com:junegunn/fzf.git'
-map <C-p> :FZF<cr>
+    Plug 'git@github.com:junegunn/fzf.git'
+    map <C-p> :FZF<cr>
 
-Plug 'git@github.com:w0rp/ale.git'
-let g:ale_set_highlights = 0
-let g:ale_sign_error ='>'
-let g:ale_sign_warning ='~'
+    Plug 'git@github.com:w0rp/ale.git'
+    let g:ale_set_highlights = 0
+    let g:ale_sign_error ='>'
+    let g:ale_sign_warning ='~'
 
-Plug 'git@github.com:scrooloose/nerdtree.git'
-map <silent> <C-n> :NERDTreeToggle<CR>
+    Plug 'git@github.com:scrooloose/nerdtree.git'
+    map <silent> <C-n> :NERDTreeToggle<CR>
 
-Plug 'git@github.com:Valloric/YouCompleteMe.git'
+    Plug 'git@github.com:leafgarland/typescript-vim.git'
 
-Plug 'git@github.com:leafgarland/typescript-vim.git'
+    Plug 'ap/vim-buftabline'
 
-Plug 'ap/vim-buftabline'
-
-call plug#end()
+    call plug#end()
+endif
 
