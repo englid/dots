@@ -23,7 +23,7 @@ git_branch() {
 setopt prompt_subst
 name=$'%{\e[1;34m%}'david
 at=$'%{\e[1;36m%}@%{\e[0m%}'
-host=$'%{\e[1;37m%}%m%{\e[0m%}'
+host=$'%{\e[1;34m%}%m%{\e[0m%}'
 dir=$'%{\e[0;31m%}%c/%{\e[0m%}'
 branch=$'%{\e[1;32m%}''$(git_branch)'$'%{\e[0m%}'
 export PROMPT=$name$at$host$' '$branch$dir$': '
@@ -40,11 +40,20 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/go/bin
 
-#Virtualenvwrapper settings:
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
+# Setting PATH for Python 3 installed by brew
+export PATH=$HOME/Library/Python/3.10/bin:$PATH
 
-# Starfish client completion
-eval "$(register-python-argcomplete client)"
-eval "$(register-python-argcomplete sf)"
+#Virtualenvwrapper settings:
+export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=/opt/homebrew/bin/python3
+export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/Library/Python/3.10/bin/virtualenv
+source $HOME/Library/Python/3.10/bin/virtualenvwrapper.sh
+
+# EZ nav
+export CDPATH=$HOME/src/git/englid-sf/:$GOPATH/src/github.com/englid-sf
+
+# Starship
+eval "$(starship init zsh)"
+
+# vim -> nvim
+alias vim=nvim
