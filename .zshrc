@@ -40,15 +40,6 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/go/bin
 
-# Setting PATH for Python 3 installed by brew
-export PATH=$HOME/Library/Python/3.10/bin:$PATH
-
-#Virtualenvwrapper settings:
-export WORKON_HOME=$HOME/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=/opt/homebrew/bin/python3
-export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/Library/Python/3.10/bin/virtualenv
-source $HOME/Library/Python/3.10/bin/virtualenvwrapper.sh
-
 # EZ nav
 export CDPATH=$HOME/src/git/englid-sf/:$GOPATH/src/github.com/englid-sf
 
